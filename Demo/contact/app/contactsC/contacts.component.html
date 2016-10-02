@@ -1,0 +1,43 @@
+
+<div class="box-container-left">
+<h2>Add Contact</h2>
+<div class="ux_contact_form">
+
+	<div>
+		<label>Name:  </label>&nbsp; <input #Name />
+	</div>
+	<br>
+	<div>
+		<label>Phone: </label> &nbsp;<input #Phone />
+	</div>
+	<div class="button-row">
+	<button 
+		(click)="add(Name.value, Phone.value); Name.value=''; Phone.value=''">
+		Add</button>
+	</div>
+	<label *ngIf="!check" style="color: red">Please input name and
+		phone!</label>
+</div>
+</div>
+
+<div class="box-container-right">
+<h2>Contacts</h2>
+<div class="scroll-bar">
+<ul class="contacts">
+	<li *ngFor="let contact of contacts" (click)="onSelect(contact)"
+		[class.selected]="contact === selectedContact">
+		<span class="badge">{{contact.id}}</span> 
+		<span>{{contact.name}}</span>
+		<button class="delete" (click)="delete(contact); $event.stopPropagation()">x</button>
+		<ul class="children" >
+			<li>
+				<div *ngIf="selectedContact" class="ux_detail">
+					<h3>Phone: {{selectedContact.phone}}</h3>
+					<button (click)="gotoDetail()">Edit contact</button>
+				</div>
+			</li>
+		</ul>
+	</li>
+</ul>
+</div>
+</div>

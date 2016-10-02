@@ -1,0 +1,13 @@
+<div class="ux_contact_search">
+	<contact-search></contact-search>
+</div>
+<div class="grid grid-pad">
+	<h3>Top Contacts</h3>
+	<div *ngFor="let contact of contacts" (click)="gotoDetail(contact)"
+		class="col-2-2">
+		<div class="module contact">
+			<h4>{{contact.name | uppercase}}</h4>
+		</div>
+	</div>
+</div>
+

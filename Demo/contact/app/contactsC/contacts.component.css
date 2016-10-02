@@ -1,0 +1,148 @@
+.selected {
+	background-color: #888a85!important;
+	color: black;
+}
+
+.contacts {
+	margin-top: 0px;
+	list-style-type: none;
+	padding: 0;
+	width: 15em;
+	float: left;
+	margin-left: 20px;
+}
+
+.contacts li {
+	position: relative;
+	cursor: pointer;
+	left: 10;
+	background-color: #EEE;
+	margin: 0 0 .5em 0;
+	padding: .3em 0;
+	height: auto;
+	border-radius: 4px;
+}
+
+.contacts li:hover {
+	color: #3465a4;
+	background-color: #DDD;
+	left: .1em;
+}
+
+.contacts li.selected:hover {
+	background-color: #888a85!important;
+	color: white;
+}
+
+.contacts li.selected .children {
+	display: block;
+}
+
+
+.children{
+	position: absolute;
+	display: none;
+	margin-left: 210px;
+	margin-top: -40px;
+	list-style-type: none;
+	width: 200px;
+}
+.ux_detail{
+	width: 200px;
+	text-align: center;
+}
+
+
+.contacts .text {
+	position: relative;
+	top: -3px;
+}
+
+.contacts .badge {
+	display: inline-block;
+	font-size: small;
+	color: white;
+	padding: 0.8em 0.7em 0 0.7em;
+	background-color: #4e9a06;
+	line-height: 1em;
+	position: relative;
+	left: -1px;
+	top: -4px;
+	height: 1.8em;
+	margin-right: .8em;
+	border-radius: 4px 0 0 4px;
+}
+
+button {
+	font-family: Arial;
+	background-color: #d3d7cf;
+	border: none;
+	padding: 5px 10px;
+	border-radius: 4px;
+	cursor: pointer;
+	cursor: hand;
+}
+
+button:hover {
+	background-color: #4e9a06;
+}
+
+button.delete {
+	float: right;
+	margin-top: 2px;
+	margin-right: .8em;
+	background-color: gray !important;
+	color: white;
+}
+.ux_contact_form{
+	width: 90%;
+	height: auto;
+	float: left;
+	border: solid 1px pink;
+	border-radius: 10px;
+	padding: 10px;
+	box-shadow: 2px 2px 2px pink;
+}
+.box-container-left{
+	float: left;
+	width: 25%;
+
+}
+.box-container-right{
+	float: left;
+	width: 70%;
+	margin-left: 20px;
+	padding-left: 20px;
+}
+.button-row{
+	margin-top: 10px;
+	text-align: center;
+}
+.scroll-bar{
+	width: 600px;
+	overflow: auto;
+
+	height: 400px;
+}
+@media ( max-width : 600px) {
+	.module {
+		font-size: 10px;
+		max-height: 75px;
+	}
+	.box-container-left{
+		min-width: 250px;
+	}
+	.box-container-right{
+		min-width: 250px;
+		margin-left: 0px;
+		padding-left: 0px;
+	}
+	.ux_contact_form{
+		padding: 5;
+		margin: 0;
+		width: 210px;
+	}
+	.contacts {
+		margin-left: 0px;
+	}
+}
